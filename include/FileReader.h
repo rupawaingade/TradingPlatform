@@ -11,7 +11,6 @@ private:
        
 public:
     
-    
    vector<string> readFile(const string& filename)
    {
       //Creation of ifstream class object to read the file
