@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.22)
+
+
+project(TradingPlatform)
+
+include(CTest)
+enable_testing()
+find_package(GTest CONFIG REQUIRED)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(${PROJECT_NAME}
+    Message.cpp
+
+)
