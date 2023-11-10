@@ -1,17 +1,20 @@
 #pragma once
 #include <string>
 using namespace std;
+
+
+enum class Side{BUY,SELL};
 struct Order{
 
      int uId;
      int oId;
-     string side;
+     Side side;
      string sym;
      int qty;
      double prc;
      
      
-     Order(int uId,int oId,string sym,int qty,double prc,string side)
+     Order(int uId,int oId,string sym,int qty,double prc,Side side)
      {
         this->uId = uId;
         this->oId = oId;
@@ -29,6 +32,7 @@ struct Order{
         this->sym = other.sym;
         this->qty = other.qty;
         this->prc = other.prc;
+        this->side = other.side;
      }
 
      Order & operator = (Order& other) {
@@ -41,11 +45,17 @@ struct Order{
         this->prc = other.prc;
         return *this;
      }
+    char sideStr(Side side)
+    {
+        if(side == Side::BUY)
+            return 'B';
+        return 'S';
 
+    }
 
     void print()
     {
-        std::cout << " " << uId << " " << side << " " << qty << " " << sym << " " << prc << std::endl; 
+        std::cout << " " << uId << " " << sideStr(side) << " " << qty << " " << sym << " " << prc << std::endl; 
        
     }
     

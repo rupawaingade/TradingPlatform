@@ -16,7 +16,7 @@ class Client
             this->uname = username;
         }
 
-        Order createOrder(string s,string si,int qu,double pr)
+        Order createOrder(string s,Side si,int qu,double pr)
         {
             //Order(int uId,int oId,string sym,int qty,double prc,string side)
 

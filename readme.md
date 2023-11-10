@@ -6,4 +6,5 @@ sudo apt-get install cmake
 
 
 ## build
-g++ Client.cpp -I./include -o Client
+g++ ClientApp.cpp --std=c++14 -g -I./include -o Client
+./Client
