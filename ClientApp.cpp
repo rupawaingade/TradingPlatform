@@ -11,7 +11,7 @@ int main()
     s.addOrder(o);
     s.addOrder(o1);
 
-    Client p("Pr");
+    Client p("Prashant");
     Order o2 = p.createOrder("AAPL",Side::BUY,200,11);
     s.addOrder(o2);
 
